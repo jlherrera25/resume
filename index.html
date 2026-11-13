@@ -47,7 +47,7 @@
   .when a, .cert a { color: var(--accent); }
   .cert img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; margin: 4px 0 8px; }
   @media print {
-    .cert, .cert-link { display: none; }   /* the original certificate PDF is appended as its own page */
+    .cert, .cert-link, .callout { display: none; }   /* the original certificate PDF is appended as its own page */
     body { background: #fff; color: #000; }
     .page { padding: 0; max-width: none; }
     .sheet { border: 0; padding: 0; background: #fff; }
@@ -55,7 +55,7 @@
     :root { --accent: #1f4f9a; --muted: #444; --rule: #bbb; --chip: #eef3fb; }
     h2 { margin-top: 16px; }
     .job { break-inside: avoid; }
-    body { font-size: 8.2pt; line-height: 1.16; }
+    body { font-size: 8pt; line-height: 1.15; }
     .row strong { font-size: .95rem; }
     .when { font-size: .9rem; }
     h2 { break-after: avoid; }
@@ -85,12 +85,12 @@
 
 <h2>Education</h2>
 <div class="job">
-  <div class="row"><strong>Arizona State University — Online</strong><span class="when">Expected Dec 2028</span></div>
+  <div class="row"><strong>Arizona State University — Online</strong></div>
   <p class="sub">B.S., Electrical Engineering · GPA 3.4</p>
 </div>
 <div class="job">
   <div class="row"><strong>University of Texas at El Paso</strong><span class="when">El Paso, TX · Dec 2022</span></div>
-  <p class="sub">B.S., Health Science · GPA 3.8</p>
+  <p class="sub">B.S., Health Science · GPA 3.8 · Cum Laude</p>
 </div>
 
 <h2>Licenses &amp; Certifications</h2>
@@ -107,9 +107,11 @@
 
 <div class="job">
   <div class="row"><strong>Serve El Paso</strong><span class="when">El Paso, TX · Mar 2025 – Present</span></div>
-  <p class="sub">Pickleball Manager</p>
+  <p class="sub">Head Pickleball Pro &amp; Assistant Manager</p>
+  <div class="callout">Promoted three times in under a year: Groundskeeper to Head Pickleball Pro &amp; Assistant Manager.</div>
+  <p class="chain"><b>Groundskeeper</b> <i>→</i> <b>Pickleballer</b> <i>→</i> <b>Pickleball Manager</b> <i>→</i> <b>Head Pickleball Pro &amp; Assistant Manager</b></p>
   <ul>
-    <li>Lead daily operations for pickleball programming, including scheduling, court coordination, and participant support, working with staff and volunteers.</li>
+    <li>Lead the pickleball program as Head Pro and Assistant Manager, supervising staff and coordinating scheduling, courts, and daily operations.</li>
     <li>Coordinate events, leagues, and open-play sessions; supervise check-ins, payments, and registrations with accurate records.</li>
     <li>Enforce safety compliance and serve as primary point of contact for players, resolving concerns promptly.</li>
   </ul>
@@ -148,7 +150,7 @@
   <div class="row"><strong>Cell Phone Repair</strong><span class="when">El Paso, TX · Sep 2021 – Oct 2023</span></div>
   <p class="sub">Repair Technician</p>
   <ul>
-    <li>Diagnosed customer phone and device problems hands-on, working through each fault to find the cause and recommend the right repair.</li>
+    <li>Specialized in repairing Apple products and held a repair certification; diagnosed customer phone and device problems hands-on to find the cause and recommend the right repair.</li>
     <li>Explained repair options in plain language to non-technical customers; managed intake, restocking, and POS transactions with accurate cash handling.</li>
   </ul>
 </div>
@@ -160,6 +162,7 @@
   <ul>
     <li>Co-author of <i>The Root Causes of Poverty in the United States: A Literature Review</i> (2022), a 16-page review of 20+ scholarly studies funded by Feeding America through the El Pasoans Fighting Hunger Food Bank.</li>
     <li>Pilot-tested a bilingual (English/Spanish) community survey, checked it against the source questionnaire, and helped onboard four new research assistants.</li>
+    <li><b>Teaching Assistant, DRSC 3312 (Fall 2022):</b> wrote weekly Kahoot quiz questions from lecture slides and verified student submissions in the course platform.</li>
   </ul>
 </div>
 
