@@ -44,7 +44,10 @@
   .chain i { color: var(--accent); font-style: normal; margin: 0 4px; }
   .path b { display: inline-block; min-width: 0; }
   .path span { color: var(--muted); }
+  .when a, .cert a { color: var(--accent); }
+  .cert img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; margin: 4px 0 8px; }
   @media print {
+    .cert, .cert-link { display: none; }   /* the original certificate PDF is appended as its own page */
     body { background: #fff; color: #000; }
     .page { padding: 0; max-width: none; }
     .sheet { border: 0; padding: 0; background: #fff; }
@@ -52,10 +55,15 @@
     :root { --accent: #1f4f9a; --muted: #444; --rule: #bbb; --chip: #eef3fb; }
     h2 { margin-top: 16px; }
     .job { break-inside: avoid; }
-    body { font-size: 8.8pt; line-height: 1.22; }
+    body { font-size: 8.2pt; line-height: 1.16; }
+    .row strong { font-size: .95rem; }
+    .when { font-size: .9rem; }
+    h2 { break-after: avoid; }
     header h1 { font-size: 1.6rem; }
-    h2 { margin: 7px 0 5px; padding-bottom: 3px; }
-    .job { margin-bottom: 5px; }
+    h2 { margin: 5px 0 3px; padding-bottom: 2px; }
+    header h1 { font-size: 1.45rem; }
+    header .tag { margin: 0 0 2px; }
+    .job { margin-bottom: 4px; }
     .sub { margin: 0 0 2px; }
     ul { margin-top: 3px; }
     li { margin: 1px 0; }
@@ -63,7 +71,7 @@
     .path li { padding: 2px 0 2px 14px; }
     .path li::before { top: 8px; }
   }
-  @page { margin: 0.3in 0.4in; }
+  @page { margin: 0.28in 0.38in; }
 </style>
 </head>
 <body>
@@ -77,27 +85,53 @@
 
 <h2>Education</h2>
 <div class="job">
-  <div class="row"><strong>Arizona State University — Online</strong></div>
-  <p class="sub">B.S., Electrical Engineering · GPA 3.3</p>
+  <div class="row"><strong>Arizona State University — Online</strong><span class="when">Expected Dec 2028</span></div>
+  <p class="sub">B.S., Electrical Engineering · GPA 3.4</p>
 </div>
 <div class="job">
-  <div class="row"><strong>University of Texas at El Paso</strong><span class="when">Graduated December 2022</span></div>
-  <p class="sub">B.S., Health Science · Cum Laude</p>
+  <div class="row"><strong>University of Texas at El Paso</strong><span class="when">El Paso, TX · Dec 2022</span></div>
+  <p class="sub">B.S., Health Science · GPA 3.8</p>
+</div>
+
+<h2>Licenses &amp; Certifications</h2>
+<div class="job">
+  <div class="row"><strong>Texas Electrician Apprentice License</strong><span class="when">Oct 2026</span></div>
+  <p class="sub">Texas Department of Licensing and Regulation (TDLR)</p>
+</div>
+<div class="job">
+  <div class="row"><strong>OSHA 10-Hour Construction</strong><span class="when">Completed Nov 2026<span class="cert-link"> · <a href="#osha-10">view certificate</a></span></span></div>
+  <p class="sub">OSHA-Authorized Outreach Training (360training)</p>
 </div>
 
 <h2>Experience</h2>
 
 <div class="job">
-  <div class="row"><strong>Serve El Paso</strong><span class="when">El Paso, TX · May 2025 – Present</span></div>
-  <p class="sub">Head Pickleball Pro &amp; Assistant Manager</p>
-  <div class="callout">Promoted three times in under a year: Groundskeeper to Head Pickleball Pro &amp; Assistant Manager.</div>
-  <p class="chain"><b>Groundskeeper</b> <i>→</i> <b>Pickleballer</b> <i>→</i> <b>Pickleball Manager</b> <i>→</i> <b>Head Pickleball Pro &amp; Assistant Manager</b></p>
+  <div class="row"><strong>Serve El Paso</strong><span class="when">El Paso, TX · Mar 2025 – Present</span></div>
+  <p class="sub">Pickleball Manager</p>
   <ul>
-    <li>Lead the pickleball program as Head Pro and Assistant Manager, supervising staff and coordinating scheduling, courts, and daily operations.</li>
-    <li>Run leagues, events, and open-play sessions, balancing participant demand against facility availability.</li>
-    <li>Supervise check-ins, payments, and registrations while keeping accurate records.</li>
-    <li>Primary point of contact for players: resolve issues quickly and keep the experience organized and welcoming.</li>
-    <li>Work with staff to maintain safety compliance and smooth operations.</li>
+    <li>Lead daily operations for pickleball programming, including scheduling, court coordination, and participant support, working with staff and volunteers.</li>
+    <li>Coordinate events, leagues, and open-play sessions; supervise check-ins, payments, and registrations with accurate records.</li>
+    <li>Enforce safety compliance and serve as primary point of contact for players, resolving concerns promptly.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><strong>GiGi's Playhouse</strong><span class="when">El Paso, TX · Sep 2024 – Mar 2025</span></div>
+  <p class="sub">Operations Coordinator</p>
+  <ul>
+    <li>Ran day-to-day Playhouse operations, keeping the facility clean, safe, and welcoming for participants and families.</li>
+    <li>Coordinated volunteers, program schedules, and Playhouse events and fundraisers.</li>
+    <li>Handled office administration, including donation processing, data entry, and communication with families and the community.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><strong>Floor &amp; Decor</strong><span class="when">El Paso, TX · Jan 2024 – Sep 2024</span></div>
+  <p class="sub">Warehouse Associate</p>
+  <ul>
+    <li>Operated forklifts and other heavy material-handling equipment to unload freight, stock overhead racking, and stage orders, following company safety procedures.</li>
+    <li>Picked and loaded orders of tile, stone, and flooring materials for customers and contractors.</li>
+    <li>Restocked the sales floor, ran inventory checks, and kept aisles and work areas clean and hazard-free.</li>
   </ul>
 </div>
 
@@ -105,9 +139,8 @@
   <div class="row"><strong>United Parcel Service (UPS)</strong><span class="when">El Paso, TX · Nov 2023 – Jan 2024</span></div>
   <p class="sub">Seasonal Package Handler</p>
   <ul>
-    <li>Sorted and processed shipments accurately to support on-time delivery in a fast-paced environment.</li>
-    <li>Loaded and unloaded vehicles, handling packages up to 100 lb and operating pallet jacks and hand trucks safely.</li>
-    <li>Verified labeling and routing information to prevent errors and package damage.</li>
+    <li>Sorted and processed shipments in a fast-paced environment, verifying labeling and routing to prevent errors and damage.</li>
+    <li>Loaded and unloaded vehicles, handling packages up to 100 pounds, and operated pallet jacks and hand trucks following safety standards.</li>
   </ul>
 </div>
 
@@ -115,46 +148,44 @@
   <div class="row"><strong>Cell Phone Repair</strong><span class="when">El Paso, TX · Sep 2021 – Oct 2023</span></div>
   <p class="sub">Repair Technician</p>
   <ul>
-    <li>Specialized in repairing Apple products and held a repair certification; diagnosed device problems hands-on and explained repair options in plain terms.</li>
-    <li>Processed sales, returns, and exchanges on POS systems with accurate cash handling.</li>
-    <li>Managed inventory intake and restocking; built repeat business through clear communication, reliability, and follow-through.</li>
+    <li>Diagnosed customer phone and device problems hands-on, working through each fault to find the cause and recommend the right repair.</li>
+    <li>Explained repair options in plain language to non-technical customers; managed intake, restocking, and POS transactions with accurate cash handling.</li>
   </ul>
 </div>
 
-<h2>Projects &amp; Ventures</h2>
-
+<h2>Research</h2>
 <div class="job">
-  <div class="row"><strong>AtlasNFC</strong><span class="when">Founder &amp; Creator · Sep 2026 – Present</span></div>
+  <div class="row"><strong>University of Texas at El Paso</strong><span class="when">El Paso, TX · Sep 2022 – Apr 2023</span></div>
+  <p class="sub">Undergraduate Research Assistant, Adolescent Development and Delinquency Lab</p>
   <ul>
-    <li>Developing custom NFC tap-to-review plaques that open a local business's Google review page with a single phone tap; wrote the sales handout used to pitch local businesses.</li>
+    <li>Co-author of <i>The Root Causes of Poverty in the United States: A Literature Review</i> (2022), a 16-page review of 20+ scholarly studies funded by Feeding America through the El Pasoans Fighting Hunger Food Bank.</li>
+    <li>Pilot-tested a bilingual (English/Spanish) community survey, checked it against the source questionnaire, and helped onboard four new research assistants.</li>
   </ul>
 </div>
 
+<h2>Projects</h2>
 <div class="job">
-  <div class="row"><strong>Frugal Intentions</strong><span class="when">Founder &amp; Creator · Sep 2026 – Present</span></div>
+  <div class="row"><strong>Frugal Intentions</strong><span class="when">Founder · Sep 2026 – Present</span></div>
+  <p class="sub">shopfrugalintentions.com</p>
   <ul>
-    <li>Designed and launched a public resale search website (shopfrugalintentions.com) that searches eBay, Etsy, and other platforms from one search box, built with AI-assisted development; set up hosting on Render with automatic GitHub deploys, a custom domain, and email forwarding.</li>
-  </ul>
-</div>
-
-<h2>Research Experience</h2>
-
-<div class="job">
-  <div class="row"><strong>Undergraduate Research Assistant</strong><span class="when">Sep 2022 – Apr 2023</span></div>
-  <p class="sub">Adolescent Development and Delinquency Lab, UTEP</p>
-  <ul>
-    <li>Co-authored <i>The Root Causes of Poverty in the United States: A Literature Review</i> (2022), a 16-page review of 20+ scholarly studies funded by Feeding America.</li>
-    <li>Pilot-tested a bilingual (English/Spanish) community survey and checked its questions against the source questionnaire, reporting problems to the research lead.</li>
-    <li>Managed the shared OneDrive research folder and helped onboard four new research assistants.</li>
-    <li><b>Teaching Assistant, DRSC 3312 (Fall 2022):</b> wrote weekly Kahoot quiz questions from lecture slides and verified student submissions in the course platform.</li>
+    <li>Designed and launched a public resale search website that searches eBay, Etsy, and other resale platforms from one search box, built with AI-assisted development.</li>
+    <li>Set up hosting on Render with automatic deploys from GitHub, a custom domain, and email forwarding.</li>
   </ul>
 </div>
 
 <h2>Skills</h2>
 <ul>
-  <li><b>Technical:</b> Microsoft Excel and Office, basic circuit knowledge, programming, device troubleshooting, testing and verification, literature review, survey testing, documentation.</li>
-  <li><b>Leadership &amp; teamwork:</b> Promoted repeatedly into supervisory roles; communication and customer service; POS and inventory systems.</li>
+  <li><b>Technical:</b> C++, Microsoft Office (Word, Excel, PowerPoint, Outlook), basic circuit knowledge, device troubleshooting, testing and verification.</li>
+  <li><b>Field &amp; Safety:</b> Electrical apprentice (TDLR licensed), forklift and heavy equipment operation, pallet jacks and hand trucks, safety and procedure compliance.</li>
+  <li><b>Research:</b> Literature review, survey testing, quality checking, documentation, OneDrive.</li>
+  <li><b>Languages:</b> English (fluent), Spanish (intermediate).</li>
 </ul>
+
+<section class="cert" id="osha-10">
+  <h2>OSHA 10-Hour Construction Certificate</h2>
+  <a href="osha-10.pdf"><img src="osha-10.jpg" width="1600" height="1238" alt="Certificate of Completion: Jose Luis Herrera, OSHA 10-Hour Construction Training, 360training, completed 11/12/2026, 10.00 credit hours, 1.0 CEUs" loading="lazy"></a>
+  <p class="sub"><a href="osha-10.pdf">Open the certificate PDF</a> — it includes a QR code to verify it with the provider.</p>
+</section>
 
 </div></div>
 </body>
